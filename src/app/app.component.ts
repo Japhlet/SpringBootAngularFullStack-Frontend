@@ -14,7 +14,7 @@ export class AppComponent implements OnInit {
   public editEmployee: Employee;
   public deleteEmployee: Employee;
 
-  constructor(private employeeService: EmployeeService){}
+  constructor(private employeeService: EmployeeService) { }
 
   ngOnInit() {
     this.getEmployees();
@@ -110,7 +110,7 @@ export class AppComponent implements OnInit {
       this.deleteEmployee = employee;
       button.setAttribute('data-target', '#deleteEmployeeModal');
     }
-    
+
     container.appendChild(button);
     button.click();
   }
